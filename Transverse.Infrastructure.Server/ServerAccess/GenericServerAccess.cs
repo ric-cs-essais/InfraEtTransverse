@@ -7,8 +7,8 @@ namespace Transverse.Infrastructure.Server_
 {
     public class GenericServerAccess<TServer>
     {
-        public TServer Server { get; init; }
-        public UserCredentials UserCredentials { get; init; }
+        public TServer Server { get; }
+        public UserCredentials UserCredentials { get; }
 
         public GenericServerAccess(TServer poServer, UserCredentials poUserCredentials)
         {

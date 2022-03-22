@@ -6,7 +6,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Sql
 {
     public class SqlFileQuery : SqlQuery, ISqlFileQuery
     {
-        public string SqlScriptFile { get; init; }
+        public string SqlScriptFile { get; }
 
         public SqlFileQuery(string psSqlScriptFile) : base("")
         {

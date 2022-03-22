@@ -8,10 +8,4 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Database\Transverse.Infrastructure.Persistence.DB.Database.csproj" />
-    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces.csproj" />
-    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server\Transverse.Infrastructure.Persistence.DB.Server.csproj" />
-  </ItemGroup>
-
 </Project>

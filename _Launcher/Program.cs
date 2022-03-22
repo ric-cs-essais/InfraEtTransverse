@@ -1,7 +1,9 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+
+using Newtonsoft.Json;
+
 using Transverse.Infrastructure.Persistence.DB.Server_;
 using Transverse.Infrastructure.Server_;
 
@@ -14,7 +16,8 @@ namespace _Launcher
             //DBServer oServer = DBServerFactory.getSingleton().getServer("titi,560/toto", 29);
             //Server oServer2 = ServerFactory.getSingleton().getServer("titi,560/toto", 28);
 
-            DBServerAccess oServerAccess = DBServerAccessFactory.getSingleton().getServerAccess("titi/toto,580/yyy", "ricky", "psw");
+            DBServerAccess oServerAccess = DBServerAccessFactory.getSingleton().getServerAccess("titi/toto,580/yyy", "ricky", "psw", "MaBase", null);
+                //.getSingleton().getServerAccess("titi/toto,580/yyy", "ricky", "psw");
             ServerAccess oServerAccess2 = ServerAccessFactory.getSingleton().getServerAccess("titi,580/toto", "ricky", "psw", 28);
 
             //Console.WriteLine(oServer2.Url.GetType());

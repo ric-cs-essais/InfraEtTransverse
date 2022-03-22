@@ -8,7 +8,7 @@ namespace Transverse.Infrastructure.Server_
     public class GenericServer<TUrl>
         where TUrl: Url
     {
-        public TUrl Url { get; init; }
+        public TUrl Url { get; }
         public Port Port { get; private set; }
 
         public GenericServer(TUrl poServerUrl, Port poServerPort = null)
