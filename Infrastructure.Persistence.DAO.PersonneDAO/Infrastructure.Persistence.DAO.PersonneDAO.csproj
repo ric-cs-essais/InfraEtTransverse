@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure.Persistence.DAO.PersonneDAO.Interfaces\Infrastructure.Persistence.DAO.PersonneDAO.Interfaces.csproj" />
+    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Sql.Interfaces\Transverse.Infrastructure.Persistence.DB.Sql.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

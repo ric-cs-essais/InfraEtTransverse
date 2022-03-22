@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server.Sql\Transverse.Infrastructure.Persistence.DB.Server.Sql.csproj" />
+  </ItemGroup>
+
+</Project>

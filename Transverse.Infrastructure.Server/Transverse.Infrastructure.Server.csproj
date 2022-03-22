@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ServerAccess\_Factories\ServerAccessFactory.cs~RF8649bf.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Transverse.Infrastructure\Transverse.Infrastructure.csproj" />
+    <ProjectReference Include="..\Transverse.Types.Var\Transverse.Types.Var.csproj" />
+  </ItemGroup>
+
+</Project>
