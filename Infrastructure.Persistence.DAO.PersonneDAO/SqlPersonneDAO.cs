@@ -11,10 +11,10 @@ namespace Infrastructure.Persistence.DAO.PersonneDAO
 {
     public class SqlPersonneDAO: IPersonneDAO<PersonneRecord>
     {
-        ISqlRunner _oSqlRunner;
+        ISqlDBRunner _oSqlRunner;
         ISqlSyntaxer _oSqlSyntaxer;
 
-        public SqlPersonneDAO(ISqlRunner poSqlRunner)
+        public SqlPersonneDAO(ISqlDBRunner poSqlRunner)
         {
             this._oSqlRunner = poSqlRunner;
             this._oSqlSyntaxer = poSqlRunner.getSyntaxer();

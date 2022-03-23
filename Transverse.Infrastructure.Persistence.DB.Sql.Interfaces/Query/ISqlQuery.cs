@@ -6,6 +6,8 @@ namespace Transverse.Infrastructure.Persistence.DB.Sql.Interfaces
 {
     public interface ISqlQuery
     {
+        string AsRawString { get; }
+
         List<ISqlQueryParameter<int>> IntParametersList { get; init; }
         List<ISqlQueryParameter<double>> DoubleParametersList { get; init; }
         List<ISqlQueryParameter<string>> StringParametersList { get; init; }

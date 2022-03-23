@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Transverse.Infrastructure.Persistence.DB.Sql.Interfaces
 {
-    public interface ISqlRunner
+    public interface ISqlDBRunner
     {
         ISqlSyntaxer getSyntaxer();
 
