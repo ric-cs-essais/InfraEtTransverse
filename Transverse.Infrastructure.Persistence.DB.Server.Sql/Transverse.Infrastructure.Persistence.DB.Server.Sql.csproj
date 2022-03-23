@@ -9,6 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces.csproj" />
+    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces.csproj" />
     <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server\Transverse.Infrastructure.Persistence.DB.Server.csproj" />
     <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Sql.Enums\Transverse.Infrastructure.Persistence.DB.Sql.Enums.csproj" />
     <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Sql.Interfaces\Transverse.Infrastructure.Persistence.DB.Sql.Interfaces.csproj" />

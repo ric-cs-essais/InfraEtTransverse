@@ -3,33 +3,30 @@ using System.Collections.Generic;
 
 using System.Data.Common;
 
+
 using Transverse.Infrastructure.Persistence.DB.Server_;
+
+using Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces;
+using Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces;
+
 using Transverse.Infrastructure.Persistence.DB.Sql.Enums;
 using Transverse.Infrastructure.Persistence.DB.Sql.Interfaces;
 
 
 namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
 {
-    public abstract class ASqlDBRunner<TDbCommand, TDbParameter, TDbType>
-        where TDbCommand : DbCommand
-        where TDbParameter : DbParameter
+    public abstract class ADBServerSqlRunner<TDbCommand, TDbParameter, TDbType>: 
+        ADBServerSqlRunnerBase<TDbCommand, TDbParameter, TDbType>, IDBServerSqlRunner
+            where TDbCommand : DbCommand
+            where TDbParameter : DbParameter
     {
-        //-- Ok "quel que soit" le type  de serveur de BDD, ET utilise les classes "Helper" spécifiques à Transverse.Infrastructure.Persistence.DB.Sql.*  --
-
-        protected ASqlDBRunner(
-                ISqlAccessHandler<TDbCommand, TDbParameter, TDbType> poSqlAccessHandler, //Remplacé par méthode abstract _getXxxx à implém. dans les enfants MySqlDBRunner, etc...
-                DBServerAccess poDBServerAccess
-            )
+        protected ADBServerSqlRunner(
+            DBServerAccess poDBServerAccess,
+            IDBServerHandler<TDbCommand, TDbParameter, TDbType> poDBServerHandler
+        ) : base(poDBServerAccess, poDBServerHandler)
         {
+            
         }
-
-        public ISqlSyntaxer getSyntaxer()   //abstract ???
-        {
-            throw new NotImplementedException();
-        }
-
-        protected abstract ISqlHandler getSqlHandler();
-
 
         //-----------------------------------------------------------------------------------------------------
 
@@ -238,27 +235,27 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
             switch (pFieldType)
             {
                 case FieldType.str:
-                    retour = this._oSqlAccessHandler.getCharDbType();
+                    retour = this._oDBServerHandler.getCharDbType();
                     break;
 
                 case FieldType.integer:
-                    retour = this._oSqlAccessHandler.getIntDbType();
+                    retour = this._oDBServerHandler.getIntDbType();
                     break;
 
                 case FieldType.longInteger:
-                    retour = this._oSqlAccessHandler.getLongIntDbType();
+                    retour = this._oDBServerHandler.getLongIntDbType();
                     break;
 
                 case FieldType.dbl:
-                    retour = this._oSqlAccessHandler.getDoubleDbType();
+                    retour = this._oDBServerHandler.getDoubleDbType();
                     break;
 
                 case FieldType.boolean:
-                    retour = this._oSqlAccessHandler.getBoolDbType();
+                    retour = this._oDBServerHandler.getBoolDbType();
                     break;
 
                 case FieldType.dateTime:
-                    retour = this._oSqlAccessHandler.getDateTimeDbType();
+                    retour = this._oDBServerHandler.getDateTimeDbType();
                     break;
 
                 default:
@@ -269,7 +266,6 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
             return (retour);
         }
 
-        //------------------------------------------------------------------------------------------
+
     }
-}
 }

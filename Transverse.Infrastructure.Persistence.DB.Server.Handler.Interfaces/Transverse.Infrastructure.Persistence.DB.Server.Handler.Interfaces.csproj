@@ -5,16 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="8.0.28" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces.csproj" />
     <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces.csproj" />
-    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server.Sql\Transverse.Infrastructure.Persistence.DB.Server.Sql.csproj" />
     <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server\Transverse.Infrastructure.Persistence.DB.Server.csproj" />
-    <ProjectReference Include="..\Transverse.Infrastructure\Transverse.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

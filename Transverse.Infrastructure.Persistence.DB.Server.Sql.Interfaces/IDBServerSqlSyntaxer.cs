@@ -1,9 +1,9 @@
 ﻿
-namespace Transverse.Infrastructure.Persistence.DB.Sql.Interfaces
+namespace Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces
 {
-    public interface ISqlSyntaxer
+    public interface IDBServerSqlSyntaxer
     {
-        //================= SYNTAXES SQL SPECIFIQUES ========================
+        //================= SYNTAXES SQL SPECIFIQUES à un DB Server ========================
         string getSyntaxTableName(string psTableName);
         string getSyntaxRealNumberField(string psFieldName, bool pbAuthorizeNull = true);
         string getSyntaxAutoIncrementField(string psFieldName, ulong piStartValueDummy = 1, string psFieldType = "INT");

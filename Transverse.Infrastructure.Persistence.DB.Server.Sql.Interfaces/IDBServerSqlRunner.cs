@@ -1,15 +1,17 @@
 ﻿
 using System.Collections.Generic;
 
+using Transverse.Infrastructure.Persistence.DB.Sql.Interfaces;
+using Transverse.Infrastructure.Persistence.DB.Server.Interfaces;
 
 
-namespace Transverse.Infrastructure.Persistence.DB.Sql.Interfaces
+namespace Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces
 {
-    public interface ISqlDBRunner
+    public interface IDBServerSqlRunner
     {
-        ISqlSyntaxer getSyntaxer();
+        IDBServerAccess getDBServerAccess();
 
-        //void setCurrentDatabaseName(DatabaseName poCurrentDatabaseName);
+        IDBServerSqlSyntaxer getDBServerSqlSyntaxer();
 
         void execSqlFile(ISqlFileQuery poSqlFileQuery);
         void execQuery(ISqlQuery poSqlQuery);

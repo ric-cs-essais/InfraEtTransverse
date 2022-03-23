@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Interfaces.csproj" />
+    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Sql.Interfaces\Transverse.Infrastructure.Persistence.DB.Sql.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>

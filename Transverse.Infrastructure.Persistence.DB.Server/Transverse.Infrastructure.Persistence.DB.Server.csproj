@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Database\Transverse.Infrastructure.Persistence.DB.Database.csproj" />
+    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Interfaces.csproj" />
     <ProjectReference Include="..\Transverse.Infrastructure.Server\Transverse.Infrastructure.Server.csproj" />
     <ProjectReference Include="..\Transverse.Infrastructure\Transverse.Infrastructure.csproj" />
   </ItemGroup>

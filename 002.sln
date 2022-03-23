@@ -53,13 +53,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transverse.Infrastructure.P
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{041F5698-F54B-4FD5-9EB1-5ACF25C061FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces", "Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces.csproj", "{E0081921-83E4-4C20-897E-E6117F435435}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql", "Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql\Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql.csproj", "{0FBAF2F6-A34E-413E-BE5A-7929AC01A171}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{F3824C2A-D0E4-4ECF-9A5E-5127DB34AD48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transverse.Infrastructure.Persistence.DB.Database", "Transverse.Infrastructure.Persistence.DB.Database\Transverse.Infrastructure.Persistence.DB.Database.csproj", "{56E01BDB-5153-42AA-858C-8E6B8A316F23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transverse.Infrastructure.Persistence.DB.Database", "Transverse.Infrastructure.Persistence.DB.Database\Transverse.Infrastructure.Persistence.DB.Database.csproj", "{56E01BDB-5153-42AA-858C-8E6B8A316F23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transverse.Infrastructure.Persistence.DB.Server.Interfaces", "Transverse.Infrastructure.Persistence.DB.Server.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Interfaces.csproj", "{2BACBAF3-F5C1-4D02-B733-9CF22DF435E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces", "Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces.csproj", "{6D1646C9-46C5-4305-B225-3225A85AA063}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql", "Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql\Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql.csproj", "{4963BB4E-0817-4305-94D0-7C5A4EB5BD14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces", "Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces.csproj", "{ABB6D23E-7B7E-4DC7-A568-79A8F60B7D59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -115,18 +119,26 @@ Global
 		{08919BB7-E56E-4D19-B554-DC81856E74F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08919BB7-E56E-4D19-B554-DC81856E74F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08919BB7-E56E-4D19-B554-DC81856E74F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E0081921-83E4-4C20-897E-E6117F435435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E0081921-83E4-4C20-897E-E6117F435435}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E0081921-83E4-4C20-897E-E6117F435435}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E0081921-83E4-4C20-897E-E6117F435435}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0FBAF2F6-A34E-413E-BE5A-7929AC01A171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0FBAF2F6-A34E-413E-BE5A-7929AC01A171}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0FBAF2F6-A34E-413E-BE5A-7929AC01A171}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0FBAF2F6-A34E-413E-BE5A-7929AC01A171}.Release|Any CPU.Build.0 = Release|Any CPU
 		{56E01BDB-5153-42AA-858C-8E6B8A316F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{56E01BDB-5153-42AA-858C-8E6B8A316F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56E01BDB-5153-42AA-858C-8E6B8A316F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56E01BDB-5153-42AA-858C-8E6B8A316F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BACBAF3-F5C1-4D02-B733-9CF22DF435E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BACBAF3-F5C1-4D02-B733-9CF22DF435E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BACBAF3-F5C1-4D02-B733-9CF22DF435E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BACBAF3-F5C1-4D02-B733-9CF22DF435E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D1646C9-46C5-4305-B225-3225A85AA063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D1646C9-46C5-4305-B225-3225A85AA063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D1646C9-46C5-4305-B225-3225A85AA063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D1646C9-46C5-4305-B225-3225A85AA063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4963BB4E-0817-4305-94D0-7C5A4EB5BD14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4963BB4E-0817-4305-94D0-7C5A4EB5BD14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4963BB4E-0817-4305-94D0-7C5A4EB5BD14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4963BB4E-0817-4305-94D0-7C5A4EB5BD14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB6D23E-7B7E-4DC7-A568-79A8F60B7D59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB6D23E-7B7E-4DC7-A568-79A8F60B7D59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB6D23E-7B7E-4DC7-A568-79A8F60B7D59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB6D23E-7B7E-4DC7-A568-79A8F60B7D59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -154,10 +166,12 @@ Global
 		{973DB566-64DE-4CE3-841B-896F245970AD} = {4F6871BA-A8B6-406B-AFBA-E010C3A3466B}
 		{08919BB7-E56E-4D19-B554-DC81856E74F9} = {041F5698-F54B-4FD5-9EB1-5ACF25C061FE}
 		{041F5698-F54B-4FD5-9EB1-5ACF25C061FE} = {4F6871BA-A8B6-406B-AFBA-E010C3A3466B}
-		{E0081921-83E4-4C20-897E-E6117F435435} = {041F5698-F54B-4FD5-9EB1-5ACF25C061FE}
-		{0FBAF2F6-A34E-413E-BE5A-7929AC01A171} = {041F5698-F54B-4FD5-9EB1-5ACF25C061FE}
 		{F3824C2A-D0E4-4ECF-9A5E-5127DB34AD48} = {EE8ADEAA-B53A-4A24-A4F9-FBC15456B8EE}
 		{56E01BDB-5153-42AA-858C-8E6B8A316F23} = {F3824C2A-D0E4-4ECF-9A5E-5127DB34AD48}
+		{2BACBAF3-F5C1-4D02-B733-9CF22DF435E0} = {4F6871BA-A8B6-406B-AFBA-E010C3A3466B}
+		{6D1646C9-46C5-4305-B225-3225A85AA063} = {041F5698-F54B-4FD5-9EB1-5ACF25C061FE}
+		{4963BB4E-0817-4305-94D0-7C5A4EB5BD14} = {041F5698-F54B-4FD5-9EB1-5ACF25C061FE}
+		{ABB6D23E-7B7E-4DC7-A568-79A8F60B7D59} = {041F5698-F54B-4FD5-9EB1-5ACF25C061FE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {99CA0526-B378-4809-B99F-784B3E91EFDD}

@@ -1,13 +1,13 @@
 ﻿using Transverse.Infrastructure.Server_;
 
 using Transverse.Infrastructure.Persistence.DB.Database;
-
+using Transverse.Infrastructure.Persistence.DB.Server.Interfaces;
 
 namespace Transverse.Infrastructure.Persistence.DB.Server_
 {
-    public class DBServerAccess: GenericServerAccess<DBServer>
+    public class DBServerAccess: GenericServerAccess<DBServer>, IDBServerAccess
     {
-        public DatabaseName CurrentDatabaseName { get; }
+        public DatabaseName CurrentDatabaseName { get; set; }
 
         public DBServerAccess(
             DBServer poServer,
