@@ -11,6 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Infrastructure.Persistence.DAO.PersonneDAO\Infrastructure.Persistence.DAO.PersonneDAO.csproj" />
+    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql\Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql.csproj" />
     <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server\Transverse.Infrastructure.Persistence.DB.Server.csproj" />
   </ItemGroup>
 

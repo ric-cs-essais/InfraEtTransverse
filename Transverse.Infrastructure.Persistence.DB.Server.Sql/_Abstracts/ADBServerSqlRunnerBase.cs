@@ -40,6 +40,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
             this._oDBServerHandler = poDBServerHandler;
 
             //this._open(); this._close();
+
         }
 
         public IDBServerAccess getDBServerAccess()
@@ -71,7 +72,17 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
         {
             if (!this._isOpened())
             {
-                this._getConnection().Open();
+                try 
+                {
+                    this._getConnection().Open();
+
+                } 
+                catch (Exception oException)
+                {
+                    string sErrorMessage = $"Echec de la connexion à : " + this._getConnectionString() + "\n" + oException.Message;
+                    Console.WriteLine(sErrorMessage);
+                    throw new Exception(sErrorMessage);
+                }
 
             }
         }
@@ -135,7 +146,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
         //-----------------------------------------------------------------------------------------------------------------
 
 
-        public void execSqlFile(string psSqlScriptFile, Action<TDbCommand> pfSetSqlQueryParameters = null)
+        protected void _execSqlFile(string psSqlScriptFile, Action<TDbCommand> pfSetSqlQueryParameters = null)
         {
             {
                 try
@@ -145,7 +156,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
                         string sFileContentAsQuery = File.ReadAllText(psSqlScriptFile);
                         //Console.WriteLine(sFileContentAsQuery);
 
-                        this.execQuery(sFileContentAsQuery, pfSetSqlQueryParameters);
+                        this._execQuery(sFileContentAsQuery, pfSetSqlQueryParameters);
 
                     }
                     else
@@ -164,7 +175,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
         }
 
 
-        public void execQuery(string psSqlQuery, Action<TDbCommand> pfSetSqlQueryParameters = null)
+        protected void _execQuery(string psSqlQuery, Action<TDbCommand> pfSetSqlQueryParameters = null)
         {
             try
             {
@@ -190,7 +201,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
         }
 
         //@return {int?} inserted id.
-        public int? getInsertQueryResult(string psSqlInsertQuery, string psAutoIncrementFieldName = null, Action<TDbCommand> pfSetSqlQueryParameters = null)
+        protected int? _getInsertQueryResult(string psSqlInsertQuery, string psAutoIncrementFieldName = null, Action<TDbCommand> pfSetSqlQueryParameters = null)
         {
             int? iInsertedId;
             string sSqlInsertQuery = psSqlInsertQuery;
@@ -223,7 +234,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
 
 
         //@return {int} nb. updated rows
-        public int getUpdateQueryResult(string psSqlUpdateQuery, Action<TDbCommand> pfSetSqlQueryParameters = null)
+        protected int _getUpdateQueryResult(string psSqlUpdateQuery, Action<TDbCommand> pfSetSqlQueryParameters = null)
         {
             int iNbUpdatedRows;
 
@@ -255,7 +266,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
 
 
         //@return {int} nb. deleted rows
-        public int getDeleteQueryResult(string psSqlDeleteQuery, Action<TDbCommand> pfSetSqlQueryParameters = null)
+        protected int _getDeleteQueryResult(string psSqlDeleteQuery, Action<TDbCommand> pfSetSqlQueryParameters = null)
         {
             int iNbDeletedRows;
 
@@ -287,7 +298,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
 
         //---------------------------------
 
-        public List<TResultRecordType> getSelectQueryResults<TResultRecordType>(
+        protected List<TResultRecordType> _getSelectQueryResults<TResultRecordType>(
             string psSelectQuery,
             Func<TResultRecordType> pfCreateResultNewRecord,
             Action<DbDataReader, TResultRecordType> pfSetResultRecordFieldsValue,
@@ -401,7 +412,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
         private string _getSqlSelectQueryResultRecordFieldValueAsString(ushort piFieldIndexInResultRecord, DbDataReader poRecordReader)
         {
             string retour = (poRecordReader.IsDBNull(piFieldIndexInResultRecord)) ? null : poRecordReader.GetString(piFieldIndexInResultRecord); //Syntaxe pour gérer un NULL en base (c-à-d pas d'erreur)
-            Console.WriteLine($"Colonne No{piFieldIndexInResultRecord} ; Chaîne = '{VarConvert.toDebugString(retour)}'");
+            //Console.WriteLine($"Colonne No{piFieldIndexInResultRecord} ; Chaîne = '{VarConvert.toDebugString(retour)}'");
             return (retour);
         }
         private int? _getSqlSelectQueryResultRecordFieldValueAsInt(ushort piFieldIndexInResultRecord, DbDataReader poRecordReader)

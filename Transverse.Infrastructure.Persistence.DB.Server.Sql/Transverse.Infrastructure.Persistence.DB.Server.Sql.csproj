@@ -14,7 +14,6 @@
     <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Server\Transverse.Infrastructure.Persistence.DB.Server.csproj" />
     <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Sql.Enums\Transverse.Infrastructure.Persistence.DB.Sql.Enums.csproj" />
     <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Sql.Interfaces\Transverse.Infrastructure.Persistence.DB.Sql.Interfaces.csproj" />
-    <ProjectReference Include="..\Transverse.Infrastructure.Persistence.DB.Sql\Transverse.Infrastructure.Persistence.DB.Sql.csproj" />
   </ItemGroup>
 
 </Project>

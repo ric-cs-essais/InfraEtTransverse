@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using MySql.Data.MySqlClient;
 using System.Data.Common;
 
-using Transverse.Infrastructure;
+using Transverse.Infrastructure; //Port
 using Transverse.Infrastructure.Persistence.DB.Server_;
-using Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces;
 using Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces;
+
+using Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces;
 
 
 namespace Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql
@@ -18,6 +20,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql
         public MySqlServerHandler(MySqlServerSqlSyntaxer poMySqlServerSqlSyntaxer)
         {
             this._oMySqlServerSqlSyntaxer = poMySqlServerSqlSyntaxer;
+
         }
 
         public IDBServerSqlSyntaxer getDBServerSqlSyntaxer()
@@ -48,7 +51,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql
             Port oServerPort = poDBServerAccess.Server.Port;
             if (oServerPort == null)
             {
-                throw new System.Exception("La connexion au serveur MySQL, nécessite la mention d'un numéro de port.");
+                throw new Exception("La connexion au serveur MySQL, nécessite la mention d'un numéro de port.");
             }
 
             oConnectionStringKeyValues.Add("server", poDBServerAccess.Server.Url.Value);

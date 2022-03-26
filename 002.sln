@@ -57,13 +57,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{F3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transverse.Infrastructure.Persistence.DB.Database", "Transverse.Infrastructure.Persistence.DB.Database\Transverse.Infrastructure.Persistence.DB.Database.csproj", "{56E01BDB-5153-42AA-858C-8E6B8A316F23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transverse.Infrastructure.Persistence.DB.Server.Interfaces", "Transverse.Infrastructure.Persistence.DB.Server.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Interfaces.csproj", "{2BACBAF3-F5C1-4D02-B733-9CF22DF435E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transverse.Infrastructure.Persistence.DB.Server.Interfaces", "Transverse.Infrastructure.Persistence.DB.Server.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Interfaces.csproj", "{2BACBAF3-F5C1-4D02-B733-9CF22DF435E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces", "Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces.csproj", "{6D1646C9-46C5-4305-B225-3225A85AA063}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces", "Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Sql.Interfaces.csproj", "{6D1646C9-46C5-4305-B225-3225A85AA063}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql", "Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql\Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql.csproj", "{4963BB4E-0817-4305-94D0-7C5A4EB5BD14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql", "Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql\Transverse.Infrastructure.Persistence.DB.Server.Sql.MySql.csproj", "{4963BB4E-0817-4305-94D0-7C5A4EB5BD14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces", "Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces.csproj", "{ABB6D23E-7B7E-4DC7-A568-79A8F60B7D59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces", "Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces\Transverse.Infrastructure.Persistence.DB.Server.Handler.Interfaces.csproj", "{ABB6D23E-7B7E-4DC7-A568-79A8F60B7D59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace Infrastructure.Persistence.DAO.PersonneDAO.Interfaces
 {
-    public interface IPersonneDAO<TPersonneRecord>
+    public interface IPersonneDAO
     {
         int insert();
         int update();
         int delete();
 
-        List<TPersonneRecord> select();
+        List<TPersonneRecord> select<TPersonneRecord>();
 
         long getNbFemmes();
         void sommeNombresAVirgule();

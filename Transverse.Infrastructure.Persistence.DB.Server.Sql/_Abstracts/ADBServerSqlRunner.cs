@@ -33,7 +33,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
 
         public void execSqlFile(ISqlFileQuery poSqlFileQuery)
         {
-            this.execSqlFile(
+            this._execSqlFile(
                 poSqlFileQuery.SqlScriptFile,
                 (TDbCommand poSqlCommand) =>
                 {
@@ -47,7 +47,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
         {
             try
             {
-                this.execQuery(
+                this._execQuery(
                     poSqlQuery.AsRawString,
                     (TDbCommand poSqlCommand) =>
                     {
@@ -68,7 +68,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
 
             try
             {
-                iInsertedId = this.getInsertQueryResult(
+                iInsertedId = this._getInsertQueryResult(
                     poSqlInsertQuery.AsRawString,
                     poSqlInsertQuery.AutoIncrementFieldName,
                     (TDbCommand poSqlCommand) =>
@@ -94,7 +94,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
 
             try
             {
-                iNbUpdatedRows = this.getUpdateQueryResult(
+                iNbUpdatedRows = this._getUpdateQueryResult(
                     poSqlUpdateQuery.AsRawString,
                     (TDbCommand poSqlCommand) =>
                     {
@@ -119,7 +119,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
 
             try
             {
-                iNbDeletedRows = this.getDeleteQueryResult(
+                iNbDeletedRows = this._getDeleteQueryResult(
                     poSqlDeleteQuery.AsRawString,
                     (TDbCommand poSqlCommand) =>
                     {
@@ -144,7 +144,7 @@ namespace Transverse.Infrastructure.Persistence.DB.Server.Sql
 
             try
             {
-                oResultRecords = this.getSelectQueryResults<TResultRecordType>(
+                oResultRecords = this._getSelectQueryResults<TResultRecordType>(
                     poSelectQuery.AsRawString,
                     () => poSelectQuery.fCreateResultNewRecord(),
                     (DbDataReader poDbDataReader, TResultRecordType poResultRecord) =>
